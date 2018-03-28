@@ -12,6 +12,8 @@ import RoadPage from '@/components/AboutPage/RoadPage'
 import LabmenPage from '@/components/AboutPage/LabmenPage'
 import StrengthPage from '@/components/AboutPage/StrengthPage'
 
+import GadgetsPage from '@/components/GadgetsPage'
+
 Vue.use(Router)
 
 export default new Router({
@@ -28,6 +30,10 @@ export default new Router({
         { path: 'labmen', component: LabmenPage },
         { path: 'strength', component: StrengthPage }
       ]
+    }, {
+      path: '/gadgets',
+      name: 'GadgetsPage',
+      component: GadgetsPage
     }, {
       path: '/bbs',
       component: BBSPage,
