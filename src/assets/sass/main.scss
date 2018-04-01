@@ -1,10 +1,11 @@
 @import "../../../node_modules/bulma/sass/utilities/_all";
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 $primary: #1a073e;
 $primary-invert: findColorInvert($primary);
 
-// $family-serif: "Georgia", serif;
-// $family-primary: $family-serif;
+$family-serif: 'Noto Sans Japanese', sans-serif;
+$family-primary: $family-serif;
 
 $colors: (
   white: ($white, $black), 
