@@ -14,7 +14,6 @@
           <span></span>
         </div>
       </div>
-
       <div class="navbar-menu" :class="{ 'is-active': isActive }">
         <div class="navbar-end">
           <router-link class="navbar-item" v-for="(item, i) in items"
@@ -78,14 +77,17 @@ export default {
 
 <style scoped>
 .navbar {
-  transition: background-color 250ms;
+  transition: background-color 250ms, box-shadow 250ms;
+  transition-timing-function: ease;
+}
+
+.navbar .navbar-item {
+  transition: background-color 250ms, opacity 250ms;
   transition-timing-function: ease;
 }
 
 .navbar.is-transparent .navbar-item {
   opacity: 0.9;
-  transition: background-color 250ms;
-  transition-timing-function: ease;
 }
 
 .navbar.is-transparent .navbar-item:hover,

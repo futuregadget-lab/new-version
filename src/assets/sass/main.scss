@@ -1,0 +1,21 @@
+@import "../../../node_modules/bulma/sass/utilities/_all";
+
+$primary: #1a073e;
+$primary-invert: findColorInvert($primary);
+
+// $family-serif: "Georgia", serif;
+// $family-primary: $family-serif;
+
+$colors: (
+  white: ($white, $black), 
+  black: ($black, $white), 
+  light: ($light, $light-invert), 
+  dark: ($dark, $dark-invert), 
+  primary: ($primary, $primary-invert), 
+  info: ($info, $info-invert), 
+  success: ($success, $success-invert), 
+  warning: ($warning, $warning-invert), 
+  danger: ($danger, $danger-invert)
+);
+
+@import "../../../node_modules/bulma/bulma";

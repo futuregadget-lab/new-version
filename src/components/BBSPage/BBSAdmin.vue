@@ -9,7 +9,7 @@
             <div class="control has-icons-left">
               <input type="text" class="input is-medium" :placeholder="$t('bbsPage.adminPage.username')">
               <span class="icon is-small is-left">
-                <i class="fa fa-user"></i>
+                <i class="fas fa-user"></i>
               </span>
             </div>
           </div>
@@ -17,7 +17,7 @@
             <div class="control has-icons-left">
               <input type="text" class="input is-medium" :placeholder="$t('bbsPage.adminPage.password')">
               <span class="icon is-small is-left">
-                <i class="fa fa-key"></i>
+                <i class="fas fa-key"></i>
               </span>
             </div>
           </div>
@@ -29,9 +29,10 @@
           </div>
           <button class="button is-block is-primary is-medium is-fullwidth" v-t="'bbsPage.adminPage.authenticate'"></button>
         </div>
-        <div class="notification is-warning has-text-left">
-          <small v-html="$t('bbsPage.adminPage.note')"></small>
-        </div>
+        <article class="message is-warning is-small has-text-left">
+          <div class="message-header" v-t="'bbsPage.adminPage.toLabmen'"></div>
+          <div class="message-body" v-html="$t('bbsPage.adminPage.note')"></div>
+        </article>
       </div>
     </div>
   </section>

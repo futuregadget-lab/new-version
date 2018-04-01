@@ -2,21 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import VueI18n from 'vue-i18n'
 import router from './router'
-import messages from './lang'
+import { i18n } from './setup/i18n-setup'
 
-import '../node_modules/bulma/css/bulma.css'
+import '@/assets/sass/main.scss'
 
 Vue.config.productionTip = false
-
-Vue.use(VueI18n)
-
-const i18n = new VueI18n({
-  locale: 'jp',
-  fallbackLocale: 'en',
-  messages
-})
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,10 +1,9 @@
 <template>
-  <section class="hero"
-      :style="style"
+  <section class="hero is-primary"
       :class="cssClass"
       ref="theHero">
     <div class="hero-head">
-      <the-navbar :color="color"
+      <the-navbar color="primary"
          :outside="navbarOutside" :transparent="navbarTransparent">
       </the-navbar>
     </div>
@@ -18,7 +17,7 @@
     </div>
 
     <div class="hero-foot" v-if="links.length">
-      <nav class="tabs">
+      <nav class="tabs is-boxed">
         <div class="container">
           <ul>
             <router-link v-for="(link, i) in links"
@@ -54,20 +53,10 @@ export default {
     TheNavbar
   },
   computed: {
-    style () {
-      const style = {}
-      if (this.backgroundImage) {
-        style['background-image'] = `url('${this.backgrounds[this.currentBackground]}')`
-      }
-      return style
-    },
     cssClass () {
-      const cssClass = [ 'is-' + this.color ]
+      const cssClass = []
       if (this.size !== 'small') {
         cssClass.push('is-' + this.size)
-      }
-      if (this.bold) {
-        cssClass.push('is-bold')
       }
       return cssClass
     }
@@ -83,26 +72,11 @@ export default {
   created () {
     window.addEventListener('scroll', this.handleScroll)
     this.handleScroll()
-
-    if (this.backgroundImage) {
-      this.backgroundInterval = setInterval(() => {
-        this.currentBackground = (this.currentBackground + 1) % this.backgrounds.length
-      }, 5000)
-    }
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
-    this.backgroundInterval = window.clearInterval(this.backgroundInterval)
   },
   props: {
-    color: {
-      type: String,
-      default: 'dark'
-    },
-    backgroundImage: {
-      type: Boolean,
-      default: false
-    },
     size: {
       type: String,
       default: 'medium'
@@ -123,10 +97,6 @@ export default {
       type: Boolean,
       default: false
     },
-    bold: {
-      type: Boolean,
-      default: false
-    },
     links: {
       type: Array,
       default () {
@@ -139,23 +109,19 @@ export default {
 
 <style scoped>
 .hero {
-  background-position: center;
-  background-size: cover;
-  transition: background-image 1s;
-  transition-timing-function: ease;
+  background-position: right 55%;
+  background-image: url('../assets/haikei.jpg');
+  background-repeat: no-repeat;
   padding-top: 3.25rem;
   margin-top: -3.25rem;
 }
 
-.hero .navbar.is-dark.is-outside {
-  background-color: #363636;
-}
-
-.hero .navbar.is-warning.is-outside {
-  background-color: #ffdd57
+.hero .navbar.is-outside {
+  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1)
 }
 
 .hero .navbar.is-primary.is-outside {
-  background-color: #00d1b2
+  background-color: #1a073e;
 }
 </style>

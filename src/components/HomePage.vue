@@ -3,14 +3,14 @@
     <the-hero
        :title="$t('general.title')"
        :subtitle="$t('homePage.welcome')"
-       background-image
        centered
        subtitle-spaced
-       color="dark"></the-hero>
+       color="dark">
+    </the-hero>
 
     <div class="box cta">
       <p class="has-text-centered">
-        <span class="tag is-primary" v-t="'homePage.breakingNews'"></span>
+        <span class="tag is-info" v-t="'homePage.breakingNews'"></span>
         {{ $t('homePage.stageOne') }}
       </p>
     </div>
@@ -21,7 +21,7 @@
         <div class="column is-4">
           <div class="card">
             <div class="card-image has-text-centered">
-                <i class="fa fa-paw"></i>
+                <i class="fas fa-paw"></i>
             </div>
             <div class="card-content">
               <div class="content">
@@ -35,7 +35,7 @@
         <div class="column is-4">
           <div class="card">
             <div class="card-image has-text-centered">
-                <i class="fa fa-id-card-o"></i>
+                <i class="fas fa-id-card"></i>
             </div>
             <div class="card-content">
               <div class="content">
@@ -49,7 +49,7 @@
         <div class="column is-4">
           <div class="card">
             <div class="card-image has-text-centered">
-                <i class="fa fa-rocket"></i>
+                <i class="fas fa-rocket"></i>
             </div>
             <div class="card-content">
               <div class="content">
@@ -90,24 +90,31 @@ export default {
   border-right: none;
 }
 
+.box.cta .tag {
+  margin-right: 0.5em;
+}
+
 .features {
   padding: 5rem 0;
 }
 
-.card-image > .fa {
+.card-image > .fas {
   font-size: 8rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: #209cee;
 }
+
 .card-content .content {
   font-size: 14px;
   margin: 1rem 1rem;
 }
+
 .card-content .content h4 {
   font-size: 16px;
   font-weight: 700;
 }
+
 .card {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
   margin-bottom: 2rem;

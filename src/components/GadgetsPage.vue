@@ -4,8 +4,7 @@
        :title="$t('gadgetsPage.title')"
        :subtitle="$t('gadgetsPage.subtitle')"
        color="dark"
-       size="small"
-       bold>
+       size="small">
     </the-hero>
   </div>
 </template>

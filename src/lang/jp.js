@@ -4,10 +4,15 @@ export default {
     title: '未来ガジェット研究所',
     licenced: 'ソースコードは {0} のライセンスを受けています。',
     programmedWithLove: '{love} で {developer} が {programmed}。',
+    language: '言語',
     copyright: [
       '© 2009-2010 5pb. Inc./Nitroplus',
       '© 2011 5pb./Nitroplus 未来ガジェット菅球場'
     ],
+    crt: {
+      name: 'ブラウン管工房',
+      subtitle: '地下鉄末広町駅から歩いてすぐ！'
+    }
   },
   menu: {
     homePage: 'ホームページ',
@@ -263,8 +268,8 @@ export default {
       passwordAsking: 'パスワードを入力してください。',
       authenticate: '認証',
       rememberMe: '私を覚えている',
+      toLabmen: 'Toラボメン',
       note: `
-        Toラボメン：<br>
         パスワード忘れた奴は冷蔵庫の上の段の左奥の紙。<br>
         見たら戻しておくこと！`
     }

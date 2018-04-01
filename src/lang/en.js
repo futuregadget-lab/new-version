@@ -3,10 +3,15 @@ export default {
     title: 'Future Gadget Laboratory',
     licenced: 'The source code is licensed {0}.',
     programmedWithLove: '{programmed} with {love} by {developer}.',
+    language: 'Language',
     copyright: [
       '© 2009-2010 5pb. Inc./Nitroplus',
       '© 2011 5pb./Nitroplus "Mirai Gadget Kenkyuujou"'
     ],
+    crt: {
+      name: 'CRT Store',
+      subtitle: 'Just a short walk from Suehirocho Subway Station!'
+    },
     back: 'back'
   },
   menu: {
@@ -140,7 +145,7 @@ export default {
       comment: 'Comment',
       url: 'URL',
       password: 'Password',
-      passwordInfo: '(Password for the deletion. Up to 8 characters alphanumeric)',
+      passwordInfo: 'Password for the deletion.<br>Up to 8 characters alphanumeric.',
       submit: 'Submit',
       reset: 'Reset',
       saveCookie: 'Save the cookie information'
@@ -242,8 +247,8 @@ export default {
       passwordAsking: 'Please entering of password.',
       authenticate: 'Authenticate',
       rememberMe: 'Remember me',
+      toLabmen: 'To RABOMEN',
       note: `
-        To RABOMEN:<br>
         Any fellow who forgetting of password look on paper 
         on left back of the stage on the refrigerator.<br>
         Put back if look!`

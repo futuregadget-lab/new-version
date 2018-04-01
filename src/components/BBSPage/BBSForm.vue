@@ -10,7 +10,7 @@
         <div class="control has-icons-left">
           <input type="text" class="input" :placeholder="$t('bbsPage.form.subject')">
           <span class="icon is-small is-left">
-            <i class="fa fa-question-circle"></i>
+            <i class="fas fa-question-circle"></i>
           </span>
         </div>
       </div>
@@ -19,47 +19,61 @@
           <textarea class="textarea" :placeholder="$t('bbsPage.form.comment')"></textarea>
         </p>
       </div>
-      <div class="field is-grouped">
-        <div class="control is-expanded has-icons-left">
-          <input type="text" class="input" :placeholder="$t('bbsPage.form.name')">
-          <span class="icon is-small is-left">
-            <i class="fa fa-user"></i>
-          </span>
-        </div>
-        <div class="control is-expanded has-icons-left">
-          <input type="text" class="input" :placeholder="$t('bbsPage.form.email')">
-          <span class="icon is-small is-left">
-            <i class="fa fa-envelope"></i>
-          </span>
-        </div>
-      </div>
-      <div class="field is-grouped">
-        <div class="control is-expanded has-icons-left">
+      <div class="field">
+        <div class="control has-icons-left">
           <input type="text" class="input" :placeholder="$t('bbsPage.form.url')">
           <span class="icon is-small is-left">
-            <i class="fa fa-link"></i>
-          </span>
-        </div>
-        <div class="control has-icons-left">
-          <input type="password" class="input" :placeholder="$t('bbsPage.form.password')">
-          <span class="icon is-small is-left">
-            <i class="fa fa-key"></i>
+            <i class="fas fa-link"></i>
           </span>
         </div>
       </div>
-      <div class="field is-grouped">
-        <div class="control is-expanded">
-          <label class="checkbox">
-            <input type="checkbox">
-            {{ $t('bbsPage.form.saveCookie') }}
-          </label>
+      <div class="field">
+        <div class="field-body">
+          <div class="field">
+            <div class="control is-expanded has-icons-left">
+              <input type="text" class="input" :placeholder="$t('bbsPage.form.name')">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control is-expanded has-icons-left">
+              <input type="text" class="input" :placeholder="$t('bbsPage.form.email')">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control has-icons-left">
+              <input type="password" class="input" :placeholder="$t('bbsPage.form.password')">
+              <span class="icon is-small is-left">
+                <i class="fas fa-key"></i>
+              </span>
+            </div>
+          </div>
         </div>
-        <p class="control">
-          <button class="button">{{ $t('bbsPage.form.reset') }}</button>
-        </p>
-        <p class="control">
-          <button class="button is-primary">{{ $t('bbsPage.form.submit') }}</button>
-        </p>
+      </div>
+      <div class="field">
+        <div class="field-body">
+          <div class="field">
+            <div class="control is-expanded">
+              <label class="checkbox">
+                <input type="checkbox">
+                {{ $t('bbsPage.form.saveCookie') }}
+              </label>
+            </div>
+          </div>
+          <div class="field is-grouped is-grouped-right">
+            <p class="control">
+              <button class="button">{{ $t('bbsPage.form.reset') }}</button>
+            </p>
+            <p class="control">
+              <button class="button is-primary">{{ $t('bbsPage.form.submit') }}</button>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </article>

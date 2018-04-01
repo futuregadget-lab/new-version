@@ -42,5 +42,8 @@ export default new Router({
         { path: 'admin', component: BBSAdmin }
       ]
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return (!savedPosition) ? { x: 0, y: 0 } : savedPosition
+  }
 })

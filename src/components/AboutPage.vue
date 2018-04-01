@@ -5,8 +5,7 @@
        :subtitle="$t('aboutPage.subtitle')"
        :links="links"
        color="dark"
-       size="small"
-       bold>
+       size="small">
     </the-hero>
     <router-view></router-view>
   </div>

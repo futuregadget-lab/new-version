@@ -5,8 +5,8 @@
        :subtitle="$t('bbsPage.subtitle')"
        :links="links"
        color="dark"
-       size="small"
-       bold></the-hero>
+       size="small">
+    </the-hero>
     <router-view></router-view>
   </div>
 </template>
