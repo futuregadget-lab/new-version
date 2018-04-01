@@ -2,7 +2,7 @@
 export default {
   general: {
     title: '未来ガジェット研究所',
-    licenced: 'ソースコードは {0} のライセンスを受けています。',
+    licenced: 'ソースコードは {0} の下でライセンスされています。',
     programmedWithLove: '{love} で {developer} が {programmed}。',
     language: '言語',
     copyright: [
@@ -171,7 +171,7 @@ export default {
         comment: `
           未来ガジェット７号ってもっと安くなりませんか？<br>
           さすがに高杉ですよ～ｏｒｚ<br>
-          ２０００円ならギリギリ買ってもいいレベルです。<br>`,
+          ２０００円ならギリギリ買ってもいいレベルです。`,
         replies: [
           {
             subject: '７号の件',

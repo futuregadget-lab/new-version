@@ -1,12 +1,6 @@
 <template>
-  <section class="hero is-primary"
-      :class="cssClass"
-      ref="theHero">
-    <div class="hero-head">
-      <the-navbar color="primary"
-         :outside="navbarOutside" :transparent="navbarTransparent">
-      </the-navbar>
-    </div>
+  <section class="hero is-purple video"
+      :class="cssClass">
 
     <div class="hero-body">
       <div class="container"
@@ -33,53 +27,23 @@
 </template>
 
 <script>
-import TheNavbar from '@/components/TheNavbar'
-
-import bg0 from '@/assets/b0.jpg'
-import bg1 from '@/assets/b1.jpg'
-
 export default {
   data () {
-    return {
-      backgrounds: [ bg0, bg1 ],
-      currentBackground: 0,
-      navbarOutside: false,
-      navbarTransparent: true,
-      debounceFunction: undefined,
-      backgroundInterval: 0
-    }
-  },
-  components: {
-    TheNavbar
+    return {}
   },
   computed: {
     cssClass () {
-      const cssClass = []
-      if (this.size !== 'small') {
-        cssClass.push('is-' + this.size)
-      }
-      return cssClass
+      const size = (this.size !== 'small') ? `is-${this.size}` : ''
+      return [ size ]
     }
-  },
-  methods: {
-    handleScroll () {
-      const windowTop = window.pageYOffset
-      const theHero = this.$refs.theHero
-      this.navbarOutside = windowTop > (theHero ? theHero.offsetTop : 0)
-      this.navbarTransparent = !this.navbarOutside
-    }
-  },
-  created () {
-    window.addEventListener('scroll', this.handleScroll)
-    this.handleScroll()
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
   },
   props: {
     size: {
       type: String,
-      default: 'medium'
+      default: 'large',
+      validator (value) {
+        return ['small', 'medium', 'large', 'fullheight'].indexOf(value) !== -1
+      }
     },
     title: {
       type: String,
@@ -114,14 +78,5 @@ export default {
   background-repeat: no-repeat;
   padding-top: 3.25rem;
   margin-top: -3.25rem;
-}
-
-.hero .navbar.is-outside {
-  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1)
-}
-
-.hero .navbar.is-primary.is-outside {
-  background-color: #1a073e;
 }
 </style>

@@ -17,6 +17,7 @@
 import { availableLanguages, loadLanguageAsync } from '@/setup/i18n-setup'
 
 export default {
+  name: 'LanguageSelector',
   data () {
     return {
       languages: availableLanguages

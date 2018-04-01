@@ -1,7 +1,7 @@
 export default {
   general: {
     title: 'Future Gadget Laboratory',
-    licenced: 'The source code is licensed {0}.',
+    licenced: 'The source code is licensed under {0}.',
     programmedWithLove: '{programmed} with {love} by {developer}.',
     language: 'Language',
     copyright: [

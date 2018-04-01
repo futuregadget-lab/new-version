@@ -1,12 +1,13 @@
 <template>
   <div class="home-page">
-    <the-hero
+    <TheHero
        :title="$t('general.title')"
        :subtitle="$t('homePage.welcome')"
        centered
        subtitle-spaced
-       color="dark">
-    </the-hero>
+       color="dark"
+       size="medium"
+    />
 
     <div class="box cta">
       <p class="has-text-centered">

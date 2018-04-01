@@ -1,11 +1,12 @@
 <template>
-  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation"
-     :class="cssClass">
+  <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-shadow"></div>
     <div class="container">
       <div class="navbar-brand">
-        <a href="https://bulma.io" class="navbar-item">
-          <img src="@/assets/logo.png" alt="">
-        </a>
+        <div
+          class="navbar-item has-text-primary has-text-weight-bold is-unselectable"
+          v-t="'general.title'"
+        />
 
         <div class="navbar-burger" :class="{ 'is-active': isActive }"
            @click="toggleMenu">
@@ -16,8 +17,15 @@
       </div>
       <div class="navbar-menu" :class="{ 'is-active': isActive }">
         <div class="navbar-end">
-          <router-link class="navbar-item" v-for="(item, i) in items"
-             :key="i" :to="item.to" exact-active-class="is-active">
+          <router-link
+             class="navbar-item"
+             v-for="(item, i) in items"
+             :key="i"
+             :to="item.to"
+             :active-class="item.onlyExact ? '' : 'is-active'"
+             exact-active-class="is-active"
+             @click.native="isActive = false"
+          >
             {{ item.title }}
           </router-link>
         </div>
@@ -28,25 +36,16 @@
 
 <script>
 export default {
+  name: 'TheNavbar',
   data () {
     return {
       isActive: false
     }
   },
   computed: {
-    cssClass () {
-      const cssClass = [ 'is-' + this.color ]
-      if (this.outside) {
-        cssClass.push('is-outside')
-      }
-      if (this.transparent) {
-        cssClass.push('is-transparent')
-      }
-      return cssClass
-    },
     items () {
       return [
-        { title: this.$t('menu.homePage'), to: '/' },
+        { title: this.$t('menu.homePage'), to: '/', onlyExact: true },
         { title: this.$t('menu.about'), to: '/about' },
         { title: this.$t('menu.futureGadgets'), to: '/gadgets' },
         { title: this.$t('menu.bbs'), to: '/bbs' }
@@ -57,41 +56,18 @@ export default {
     toggleMenu () {
       this.isActive = !this.isActive
     }
-  },
-  props: {
-    color: {
-      type: String,
-      default: 'dark'
-    },
-    outside: {
-      type: Boolean,
-      default: false
-    },
-    transparent: {
-      type: Boolean,
-      default: false
-    }
   }
 }
 </script>
 
 <style scoped>
-.navbar {
-  transition: background-color 250ms, box-shadow 250ms;
-  transition-timing-function: ease;
-}
-
-.navbar .navbar-item {
-  transition: background-color 250ms, opacity 250ms;
-  transition-timing-function: ease;
-}
-
-.navbar.is-transparent .navbar-item {
-  opacity: 0.9;
-}
-
-.navbar.is-transparent .navbar-item:hover,
-.navbar.is-transparent .navbar-item.is-active {
-  opacity: 1;
+.navbar .navbar-shadow {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(transparent));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), transparent);
+  height: 8px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
 }
 </style>

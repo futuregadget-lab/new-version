@@ -18,22 +18,27 @@
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <language-selector></language-selector>
+          <LanguageSelector/>
           <p>
-            <span v-for="(copyright, i) in $t('general.copyright')" :key="i">
-              {{ copyright }}<br v-if="i < $t('general.copyright').length - 1">
-            </span>
+            <small>
+              <span v-for="(copyright, i) in $t('general.copyright')" :key="i">
+                {{ copyright }}<br v-if="i < $t('general.copyright').length - 1">
+              </span>
+            </small>
           </p>
           <p>
-            <i18n path="general.licenced" tag="span">
-              <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>
-            </i18n>
-            <br>
             <i18n path="general.programmedWithLove" tag="span">
               <i class="fa fa-code" place="programmed"></i>
-              <i class="fa fa-heart" place="love"></i>
-              <a href="https://github.com/alessandrojean" target="_blank" place="developer">@alessandrojean</a>
+              <i class="fa fa-heart has-text-danger" place="love"></i>
+              <a href="https://github.com/alessandrojean" target="_blank" place="developer">Alessandro Jean</a>
             </i18n>
+            <br>
+            <small>
+              <i18n path="general.licenced" tag="span">
+                <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>
+              </i18n>
+            </small>
+            <br>
           </p>
           <p>
             <a href="https://bulma.io" target="_blank">
@@ -50,6 +55,7 @@
 import LanguageSelector from '@/components/LanguageSelector'
 
 export default {
+  name: 'TheFooter',
   components: {
     LanguageSelector
   },
@@ -59,6 +65,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.footer {
+  padding: 3rem 1.5rem 3rem;
+}
 </style>

@@ -25,6 +25,7 @@ const loadedLanguages = ['en']
 function setI18nLanguage (lang) {
   i18n.locale = lang
   document.querySelector('html').setAttribute('lang', lang)
+  document.title = i18n.t('general.title')
   return lang
 }
 
