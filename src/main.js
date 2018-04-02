@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import { i18n } from './setup/i18n-setup'
 
+import '@/assets/scss/app.scss'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
