@@ -5,23 +5,26 @@
         <h3 class="title" v-t="'aboutPage.labmenPage.title'"></h3>
         <p class="subtitle" v-t="'aboutPage.labmenPage.subtitle'"></p>
 
-        <div class="tile is-ancestor has-text-left"
-           v-for="i in (laboratoryMembers.length / 4)" :key="i">
-          <div class="tile is-parent is-3"
-             v-for="j in 4" :key="j">
-            <div class="tile is-child card">
+        <div class="columns is-multiline has-text-left">
+          <div
+             class="column is-one-quarter"
+             v-for="(labmen, i) in $t('aboutPage.labmenPage.laboratoryMembers')"
+             :key="labmen.number"
+          >
+            <div class="card">
               <div class="card-image">
                 <figure class="image is-square">
-                  <img :src="getMemberPictureUrl(j + (i - 1) * 4)" class="main-picture">
+                  <img :src="getMemberPictureUrl(i + 1)" class="main-picture">
                 </figure>
               </div>
               <div class="card-content">
-                <p class="title is-5">{{ $t('aboutPage.labmenPage.labmenTitle', { number: '00' +  (j + (i - 1) * 4)}) }}</p>
-                <p class="subtitle is-7">{{ laboratoryMembers[j + (i - 1) * 4 - 1].name }}</p>
+                <p class="title is-5">{{ $t('aboutPage.labmenPage.labmenTitle', { number: labmen.number }) }}</p>
+                <p class="subtitle is-7">{{ labmen.name }}</p>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -31,11 +34,6 @@
 export default {
   data () {
     return {}
-  },
-  computed: {
-    laboratoryMembers () {
-      return this.$t('aboutPage.labmenPage.laboratoryMembers')
-    }
   },
   methods: {
     getMemberPictureUrl (number) {

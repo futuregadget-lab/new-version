@@ -17,7 +17,8 @@ export const i18n = new VueI18n({
 
 export const availableLanguages = [
   { name: 'English', code: 'en' },
-  { name: '日本語', code: 'jp' }
+  { name: '日本語', code: 'jp' },
+  { name: 'Português (Brasil)', code: 'pt-BR' }
 ]
 
 const loadedLanguages = ['en']

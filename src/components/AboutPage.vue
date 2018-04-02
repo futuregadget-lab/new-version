@@ -26,7 +26,8 @@ export default {
       return [
         { name: this.$t('aboutPage.roadPage.link'), to: '/about' },
         { name: this.$t('aboutPage.labmenPage.link'), to: '/about/labmen' },
-        { name: this.$t('aboutPage.strengthPage.link'), to: '/about/strength' }
+        { name: this.$t('aboutPage.strengthPage.link'), to: '/about/strength' },
+        { name: this.$t('aboutPage.aboutSitePage.link'), to: '/about/site' }
       ]
     }
   }

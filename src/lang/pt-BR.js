@@ -1,32 +1,32 @@
 export default {
   general: {
-    title: 'Future Gadget Laboratory',
-    licenced: 'The source code is licensed under {0}.',
-    programmedWithLove: '{programmed} with {love} by {developer}.',
-    language: 'Language',
+    title: 'Laboratório de Aparatos Futuristas',
+    licenced: 'O código-fonte é licenciado pelo {0}.',
+    programmedWithLove: '{programmed} com {love} por {developer}.',
+    language: 'Idioma',
     copyright: [
       '© 2009-2010 5pb. Inc./Nitroplus',
       '© 2011 5pb./Nitroplus "Mirai Gadget Kenkyuujou"'
     ],
     crt: {
-      name: 'CRT Store',
-      subtitle: 'Just a short walk from Suehirocho Subway Station!'
+      name: 'Loja de tubos Braun',
+      subtitle: 'Perto da estação Suehirocho do metrô!'
     },
     back: 'back'
   },
   menu: {
-    homePage: 'Home',
-    about: 'About',
-    futureGadgets: 'Future Gadgets',
+    homePage: 'Início',
+    about: 'Sobre',
+    futureGadgets: 'Aparatos Futuristas',
     bbs: 'Phenix BBS',
     update: 'updeto'
   },
   homePage: {
     visitor: 'You\'re the {counter} visitor to this site.',
     counter: '{counter}TH',
-    welcome: 'Welcome to the Future Gadget Laboratory homepage!',
-    breakingNews: 'Breaking News',
-    stageOne: 'Stage 1 of expansion of the western!!!',
+    welcome: 'Bem-vindo ao site do Laboratório de Aparatos Futuristas!',
+    breakingNews: 'Últimas Notícias',
+    stageOne: 'Primeiro estágio da expansão para o ocidente!!!',
     futureGadget: 'Future Gadget update!',
     compatibility: 'This HOMEPAGE is compatible with deloode chrome ver.2.0 and up.',
     resolution: 'Recommended resolution is 1600x1200 pixels.',
@@ -38,30 +38,27 @@ export default {
       </p>
       <p>
         <a href="http://futuregadget-lab.com/" target="_blank">click here for main site</a>
-      </p>`,
-    notice: 'This is a modified version of {site} website.',
-    credits: 'Coded by {name} using {vuejs}.',
-    language: 'Language: {0}'
+      </p>`
   },
   aboutPage: {
-    title: 'About Lab',
-    subtitle: '~Vanishment this world like nightmares is our objective us fugitives of eternity~',
+    title: 'Sobre o laboratório',
+    subtitle: '~Nosso objetivo como fugitivos da eternidade é desaparecer deste mundo como pesadelos~',
     roadPage: {
-      link: 'Road',
-      title: 'Road of procure the chaotic',
-      subtitle: '~We is not to be stopped- never. Not until grab in this palm~',
+      link: 'Caminho',
+      title: 'Caminho para a procura do caos.',
+      subtitle: '~Nós nunca pararemos. Até dominarmos em nossas mãos~',
       description: `
-        Supreme objective (function) of Future Gadget Laboratory is "of doing invent". <br>
-        By invention by his companions and mad scientist Hououin Kyouma of madness,
-        do destroy the governance structure in the shadows that manipulate world,
-        and in result world surely head to chaos. <br>
-        It is of the selection of Door of Destiny Stone- Steins Gate. El Psy Kongroo.`
+        O objetivo (função) supremo do Laboratório de Aparatos Futuristas é "inventar".<br>
+        Com invenções de seus colegas e o cientista louco Hououin Kyouma do mau,
+        destruir a estrutura de governo nas sombras que manipula o mundo,
+        e como resultado o mundo sem dúvida será guiado para o caos.<br>
+        É a escolha do Porta da Pedra do Destino - Steins Gate. El Psy Kongroo.`
     },
     labmenPage: {
-      link: 'Members',
-      title: 'True name\'s of those chosen',
-      subtitle: '~I are, we be, RABOMEN~',
-      labmenTitle: 'No.{number}',
+      link: 'Membros',
+      title: 'Verdadeiro nome dos escolhidos',
+      subtitle: '~Eu sou, nós somos, LABMEN~',
+      labmenTitle: 'Nº {number}',
       laboratoryMembers: [
         {
           number: '001',
@@ -102,174 +99,184 @@ export default {
       ]
     },
     strengthPage: {
-      link: 'Strength',
-      title: 'Want the strength?',
-      subtitle: '~It defeat the enemy soon. It consume the self the death soon.~',
+      link: 'Força',
+      title: 'Você quer a força?',
+      subtitle: '~Ela derrota o inimigo rápido. Ela se consome até a morte rápido.~',
       description: `
-        In the Future Gadget Laboratory, together with repeat inventions researching,
-        recruiting always of researchers for fight the final crusade which one day face world.<br>
-        ESP-compatible persons should make a coming to the laboratory with posthaste.
-        This Hououin Kyouma shall make a giving of blood covenant.<br>
-        Accepting the admission of followings:`,
+        No Laboratório de Gadgets Futuristas, juntamente com incessantes pesquisas e invenções,
+        recrutando sempre pesquisadores para lutar a última cruzada que um dia enfrentará o mundo.<br>
+        Pessoas com poderes especiais devem visitar o laboratório o mais rápido possível.
+        Hououin Kyouma fará um juramento de sangue.<br>
+        A admissão está aceitando o seguinte:`,
       requirements: [
-        'mad scientist',
-        'person who is making a running from Organization',
-        'person who can do the cosplay (man and/or woman)',
-        'loli girl must have big chests'
+        'cientista louco',
+        'pessoa que está fugindo da Organização',
+        'pessoa que faz cosplay (homem e/ou mulher)',
+        'meninas loli devem ter peitos grandes'
       ]
     },
     aboutSitePage: {
-      title: 'About site',
+      title: 'Sobre este site',
       link: 'Site',
-      titleWithDash: '-about site-',
       disclaimer: {
-        title: 'Disclaimer items',
+        title: 'Avisos legais',
         items: [
-          'Is strictly forbidden to reprinting of this site for the business.',
-          'Character that appears in this work, does not mean that all 18 years of age or more.',
-          'People, organizations, corporations that appears in this work, is part fiction, but it has nothing to do with real thing.'
+          'É extremamente proibído reutilizar este site com fins comerciais.',
+          'Personagens que aparecem nesta obra não são necessariamente maiores de idade.',
+          'Qualquer pessoa, organização ou corporação que aparece nesta obra é parte da ficção, e não possuem relação com a vida real.'
         ]
       },
       inquiries: {
-        title: 'Inquiries',
+        title: 'Inquéritos',
         items: [
-          `Feedback and comments for this site please come to Chiyoda-ku, Tokyo Kuramaebashi-dori crossing Tsumakoisaka alleyway.
-          There is multi-tenant building eight-story about Built '40 name "Ohiyama", there at second story.`
+          `Para feedback e comentários sobre o site, por favor venha à Chiyoda-ku, Tokyo Kuramaebashi-dori cruzando o beco Tsumakoisaka.
+          Em um prédio dos anos 1940 com oito andares chamado "Ohiyama", no segundo andar.`
         ]
       }
     }
   },
   bbsPage: {
     title: 'Phenix BBS',
-    subtitle: 'Annex of Future Gadget Laboratory',
-    returnTop: 'Return the Top',
-    admin: 'Admin',
-    messages: 'Comments',
+    subtitle: 'Anexo do Laboratório de Aparatos Futuristas',
+    admin: 'Administração',
+    messages: 'Comentários',
     form: {
-      name: 'Name',
-      email: 'Email',
-      subject: 'Subject',
-      comment: 'Comment',
+      name: 'Nome',
+      email: 'E-mail',
+      subject: 'Assunto',
+      comment: 'Comentário',
       url: 'URL',
-      password: 'Password',
-      passwordInfo: 'Password for the deletion.<br>Up to 8 characters alphanumeric.',
-      submit: 'Submit',
-      reset: 'Reset',
-      saveCookie: 'Save the cookie information'
+      password: 'Senha',
+      submit: 'Enviar',
+      reset: 'Cancelar',
+      saveCookie: 'Salvar os cookies.'
     },
-    like: 'Like',
-    reply: 'Reply',
-    postedBy: 'Posted by: ',
+    like: 'Curtir',
+    reply: 'Responder',
     comments: [
       {
-        subject: 'Price',
-        name: 'Phantasm Phangirl',
+        subject: 'Preço',
+        name: 'Garota fantasma',
         date: '2010/7/13',
-        comment: 'Can price of future gadgets No. 7 be made of a little cheapers?<br>' +
-          'It way too expensive ｏｒｚ<br>' +
-          '2000 yen is just right the pricing level.',
+        comment: `
+          O preço do aparato futurista Nº 7 pode ter um desconto?<br>
+          Está muito caro.<br>
+          Um nível de preço justo seria ¥ 2.000.`,
         replies: [
           {
-            subject: 'Matter of No. 7',
+            subject: 'Questão sobre o Nº 7',
             name: 'Hououin Kyouma',
             date: '2010/7/13',
-            comment: 'Materials cost of No. 7 alone is taking of lots of golds. It\'s being ' +
-              'cheaper than now it\'s impossible. Special price of the now is already such discount.'
+            comment: `
+              O custo da matéria-prima do Nº 7 sozinho é caro.
+              Mais barato do que agora é impossível.
+              O preço especial de agora já está com esse desconto.`
           }
         ]
       }, {
-        subject: 'The hell is wrong with this site?',
+        subject: 'O que há de errado com esse site?',
         name: 'Spunky',
         date: '2010/7/7',
-        comment: 'This site is so lame. You\'ve got to be kidding me.<br>' +
-          'I thought I went a time warp to the 90\'s for a second there.<br>' +
-          'Did you seriously machine translate this crap?'
+        comment: `
+          Esse site é todo cheio de falhas.
+          Você deve estar brincando comigo.<br>
+          Eu pensei que tinha voltado aos anos 1990 por um segundo aqui.<br>
+          Sério mesmo que você traduziu com software esta merda?`
       }, {
         subject: 'lol',
-        name: 'scampering bastard',
+        name: 'bastardo corredor',
         date: '2010/6/29',
-        comment: 'How chuunibyou a sight this is wwwww you funny guy Hououin-san!'
+        comment: `Quão chuunibyou de vista isso é kkkkk você é engraçado Hououin-san!`
       }, {
-        subject: 'Celebrity Introduction',
+        subject: 'Introdução de celebridade',
         name: 'Masa',
         date: '2010/6/21',
-        comment: 'Looks I am liked by beauty of glasses super rich celebrity.<br>' +
-          'I give the s*x to her as she asked for<br>' +
-          'She say now she buying for me a new P*rsche<br>' +
-          'Last month, I made an earning of more money than what core business of mine make, so I wish be pimp forever!<br>' +
-          'She say friend of hers is wanting of man who make good the s*x like I make too!<br>' +
-          'Sign up to score the points like me!!',
+        comment: `
+          Parece que sou admirada pela beleza dos óculos super ricos.<br>
+          Eu f**i com ela como ela pediu.<br>
+          Ela diz agora que está comprando pra mim um novo Porsche.<br>
+          No mês passado, eu ganhei mais dinheiro do que meu trabalho principal dá, então quero ser cafetão para sempre!<br>
+          Ela diz que um amigo dela está esperando um homem que f**e bem como eu também!<br>
+          Crie uma conta para ganhar pontos como eu!!`,
         url: 'http://kusomiso.tekunikku.com/tugihashonben/'
       }, {
-        subject: 'Future Gadgets',
-        name: 'Just passing the bye',
+        subject: 'Aparatos futuristas',
+        name: 'Somente olhando',
         date: '2010/6/6',
-        comment: 'Are future gadgets really for the sale? Maybe I am interested, hahah...',
+        comment: `
+          Os aparatos futuristas estão realmente a venda?
+          Talvez eu esteja interessado, hahah...`,
         replies: [
           {
-            subject: 'Future Gadgets',
+            subject: 'Aparatos futuristas',
             name: 'Hououin Kyouma',
             date: '2010/6/6',
-            comment: 'Of course they for the sale. Come send fax or come directly at the lab. ' +
-              'What you like? You having of any questions then we giving of details.'
+            comment: `
+              Claro que estão a venda.
+              Envie um fax ou venha diretamente ao laboratório.
+              O que você gostou? Tendo alguma dúvida, nós damos mais detalhes.`
           }
         ]
       }, {
         subject: 'http://broge.deaddoo.net/pupupu/05789.html',
         name: 'Yuruyu',
         date: '2010/5/30',
-        comment: 'Sorry I put link without get the permission<br>' +
-          'Please make the report'
+        comment: `
+          Desculpa, eu coloquei o link sem permissão.<br>
+          Por favor, reporte.`
       }, {
-        subject: 'College student girl a best!',
+        subject: 'Garotas do colegial são as melhores!',
         name: 'Yujiro',
         date: '2010/5/19',
-        comment: 'I maked a sexy time with sexy friend Mikitty!!<br>' +
-          'She make a puff puffing with many big the boobies<br>' +
-          'So moving is her shikkoshikko effort with thin finger!<br>' +
-          'And plus to get money doing it I be awesome www',
+        comment: `
+          Eu tive uma f**a com uma amiga sexy Mikitty!!<br>
+          Ela fez um puff puff com os peitos gigantes<br>
+          Então ela movimenta seu shikkoshikko com força com seus dedos finos!<br>
+          E mais, ganhando dinheiro fazendo isso eu seria incrível kkk`,
         url: 'http://super.eroierokunai.net/fuhihihihi/'
       }, {
-        subject: 'Commemorational proast♪',
+        subject: 'Comentário comemorativo♪',
         name: 'Mayushii☆',
         date: '2010/5/13',
-        comment: 'Nice to meet you To~uuto~uru over♪ ' +
-          'Is amazing to make a posting in English with automaton.'
+        comment: `
+          Prazer em conhecê-lo, To~uuto~uru♪ 
+          É incrível fazer um comentário em Português sem tradutor.`
       }, {
-        subject: 'Which has set up the board',
+        subject: 'Quem configurou o painel',
         name: 'Hououin Kyouma',
         date: '2010/5/10',
-        comment: 'English hompage of our future gadget laboratory was established finally. ' +
-          'Being one chased after by the Organization, I\'d prefer the work behind a scene, but  ' +
-          'I be moved by desire to leave behind a proof that "I be here". ' +
-          'Yes, I want to be the found by someone... and being in English makes a widening of audience reach around. ' +
-          'So in this board, I or the future gadget laboratory will make a collecting of any question whatever. ' +
-          'We danube to make the answering of it. That is selection of "door over the fate - Steins gate". El Psy Kongroo.'
+        comment: `
+          Site em português do nosso laboratório de aparatos futuristas foi estabilizado finalmente.
+          Sendo perseguido antes pela Organização, preferi trabalhar por baixo do tapete, mas 
+          eu fui guiado pelo desejo de deixar para trás uma prova que "eu estive aqui". 
+          Sim, eu quero ser encontrado por alguém... e estando em português faz com que tenha um maior alcance. 
+          Então nesse painel, eu ou o laboratório de aparatos futuristas iremos responder qualquer questão. 
+          Nós iremos respondê-la. Esta é uma escolha da "porta do destino - Steins gate". El Psy Kongroo.`
       }
     ],
     adminPage: {
-      title: 'Admin Page',
-      username: 'Username',
-      password: 'Password',
-      passwordAsking: 'Please entering of password.',
-      authenticate: 'Authenticate',
-      rememberMe: 'Remember me',
-      toLabmen: 'To RABOMEN',
+      title: 'Página de administração',
+      username: 'Usuário',
+      password: 'Senha',
+      passwordAsking: 'Por favor, identifique-se.',
+      authenticate: 'Autenticar',
+      rememberMe: 'Lembre-me',
+      toLabmen: 'Para os LABMEN',
       note: `
-        Any fellow who forgetting of password look on paper 
-        on left back of the stage on the refrigerator.<br>
-        Put back if look!`
+        Qualquer um que esquecer a senha, olhe no papel
+        na traseira esquerda da geladeira.<br>
+        Coloque de volta se olhar!`
     }
   },
   gadgetsPage: {
-    title: 'Gadgets being of a future',
-    subtitle: '~crystal of wisdom honed, it will be the fire of god in holy war~',
-    description: 'The following is a number of our having been invented prestigious "the Future Gadget"',
+    title: 'Aparatos futuristas',
+    subtitle: '~Cristal de sabedoria afiada, ele será o fogo de Deus na guerra sagrada~',
+    description: 'O conteúdo a seguir são nossas prestigiosas invenções, "os Aparatos Futuristas".',
     mailInfo: `
-      We also is offer all by mail order, so make not a hesitate to do fax. If you scared of
-      the regretting for products being the sold out... make a buying now.`,
-    mailOrder: 'Mail order for the fax numbering: 0C-3A66-1704',
-    number: 'No.',
+      Nós também aceitamos encomendas por correio, então não hesite em mandar um fax.
+      Se você está com medo de se arrepender pelos produtos esgotarem... compre agora.`,
+    mailOrder: 'FAX para encomendas via correio: 0C-3A66-1704',
+    number: 'Nº',
     gadgets: [
       {
         name: 'PhoneWave (provisional)',

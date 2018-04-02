@@ -6,7 +6,7 @@
         <p class="subtitle" v-t="'aboutPage.strengthPage.subtitle'"></p>
         <p v-html="$t('aboutPage.strengthPage.description')"></p>
       </div>
-      <nav class="column is-4 is-offset-4 panel">
+      <nav class="column is-4 is-offset-4 panel has-text-left">
         <div class="panel-block"
            v-for="(requirement, i) in $t('aboutPage.strengthPage.requirements')"
            :key="i">

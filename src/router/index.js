@@ -11,6 +11,7 @@ import AboutPage from '@/components/AboutPage'
 import RoadPage from '@/components/AboutPage/RoadPage'
 import LabmenPage from '@/components/AboutPage/LabmenPage'
 import StrengthPage from '@/components/AboutPage/StrengthPage'
+import SitePage from '@/components/AboutPage/SitePage'
 
 import GadgetsPage from '@/components/GadgetsPage'
 
@@ -28,7 +29,8 @@ export default new Router({
       children: [
         { path: '', component: RoadPage },
         { path: 'labmen', component: LabmenPage },
-        { path: 'strength', component: StrengthPage }
+        { path: 'strength', component: StrengthPage },
+        { path: 'site', component: SitePage }
       ]
     }, {
       path: '/gadgets',
