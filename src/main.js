@@ -4,8 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import { i18n } from './setup/i18n-setup'
+import Scrollspy from 'vue2-scrollspy'
 
 import '@/assets/scss/app.scss'
+
+Vue.use(Scrollspy)
 
 Vue.config.productionTip = false
 

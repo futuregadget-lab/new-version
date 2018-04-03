@@ -9,10 +9,19 @@ const messages = {
   'en': en
 }
 
+const numberFormats = {
+  'ja-JP': {
+    currency: {
+      style: 'currency', currency: 'JPY', currencyDisplay: 'symbol'
+    }
+  }
+}
+
 export const i18n = new VueI18n({
   locale: 'en',
   fallbackLocale: 'en',
-  messages
+  messages,
+  numberFormats
 })
 
 export const availableLanguages = [

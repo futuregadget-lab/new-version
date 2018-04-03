@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-purple video"
+  <section class="hero is-purple"
       :class="cssClass">
 
     <div class="hero-body">
