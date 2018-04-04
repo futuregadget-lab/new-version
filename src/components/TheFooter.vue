@@ -20,7 +20,7 @@
         <div class="content has-text-centered">
           <LanguageSelector/>
           <p>
-            <small>
+            <small class="is-size-7">
               <span v-for="(copyright, i) in $t('general.copyright')" :key="i">
                 {{ copyright }}<br v-if="i < $t('general.copyright').length - 1">
               </span>
