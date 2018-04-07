@@ -1,7 +1,7 @@
 <template>
   <section class="section has-text-centered">
     <div class="container">
-      <div class="column is-6 is-offset-3" id="strength">
+      <div class="column is-8 is-offset-2" id="strength">
         <h3 class="title" v-t="'aboutPage.strengthPage.title'"></h3>
         <p class="subtitle" v-t="'aboutPage.strengthPage.subtitle'"></p>
         <p v-html="$t('aboutPage.strengthPage.description')"></p>

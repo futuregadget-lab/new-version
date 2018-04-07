@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
-import en from '@/lang/en'
+import enUS from '@/lang/en-US'
 
 Vue.use(VueI18n)
 
 const messages = {
-  'en': en
+  'en-US': enUS
 }
 
 const numberFormats = {
@@ -17,20 +17,39 @@ const numberFormats = {
   }
 }
 
+const dateTimeFormats = {
+  'en-US': {
+    short: {
+      year: 'numeric', month: 'short', day: 'numeric'
+    }
+  },
+  'ja-JP': {
+    short: {
+      year: 'numeric', month: 'short', day: 'numeric'
+    }
+  },
+  'pt-BR': {
+    short: {
+      year: 'numeric', month: 'long', day: 'numeric'
+    }
+  }
+}
+
 export const i18n = new VueI18n({
-  locale: 'en',
-  fallbackLocale: 'en',
+  locale: 'en-US',
+  fallbackLocale: 'en-US',
   messages,
-  numberFormats
+  numberFormats,
+  dateTimeFormats
 })
 
 export const availableLanguages = [
-  { name: 'English', code: 'en' },
-  { name: '日本語', code: 'jp' },
+  { name: 'English', code: 'en-US' },
+  { name: '日本語', code: 'ja-JP' },
   { name: 'Português (Brasil)', code: 'pt-BR' }
 ]
 
-const loadedLanguages = ['en']
+const loadedLanguages = ['en-US']
 
 function setI18nLanguage (lang) {
   i18n.locale = lang

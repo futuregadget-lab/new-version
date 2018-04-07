@@ -2,6 +2,7 @@
 @import "../../../node_modules/bulma/sass/utilities/functions";
 
 @import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(//fonts.googleapis.com/css?family=Nixie+One);
 @import url(//use.fontawesome.com/releases/v5.0.9/css/all.css);
 
 $primary: #4827a3;
@@ -9,6 +10,9 @@ $primary-invert: findColorInvert($primary);
 
 $purple: #1a073e;
 $purple-invert: findColorInvert($purple);
+
+$orange: #f4a111;
+$orange-invert: findColorInvert($orange);
 
 $link: $primary;
 $link-invert: $primary-invert;
@@ -18,8 +22,44 @@ $family-primary: $family-serif;
 
 @import "~bulma/sass/utilities/derived-variables";
 $addColors: (
-  "purple": ($purple, $purple-invert)
+  "purple": ($purple, $purple-invert),
+  "orange": ($orange, $orange-invert)
 );
 $colors: map-merge($colors, $addColors);
 
+$fullhd: 1152px;
+
 @import "../../../node_modules/bulma/bulma";
+
+.is-shady {
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+  will-change: box-shadow, transform;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.is-shady .card-image .image img {
+  border-radius: 4px 4px 0 0;
+}
+
+.is-shady:hover {
+  box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+  transform: scale(1.05);
+}
+
+.is-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+}
+
+.section.is-horizontal-paddingless {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.breadcrumb.has-angle-separator li + li::before {
+  content: '›'
+}

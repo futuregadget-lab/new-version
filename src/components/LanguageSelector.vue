@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <div class="select is-small">
+    <div class="select">
       <select v-model="lang">
         <option
             v-for="lang in languages"

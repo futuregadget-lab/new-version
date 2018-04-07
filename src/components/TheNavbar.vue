@@ -1,6 +1,11 @@
 <template>
-  <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-shadow"></div>
+  <nav
+     class="navbar is-white"
+     :class="{ 'is-fixed-top' : fixedTop }"
+     role="navigation"
+     aria-label="main navigation"
+  >
+    <div class="navbar-shadow" v-if="shadow"></div>
     <div class="container">
       <div class="navbar-brand">
         <div
@@ -28,6 +33,23 @@
           >
             {{ item.title }}
           </router-link>
+          <div class="navbar-item" v-if="cartCount">
+            <div class="field">
+              <p class="control">
+                <router-link
+                  class="button is-primary is-outlined"
+                  to="/cart"
+                >
+                  <span class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </span>
+                  <span>
+                    {{ $t('gadgetsPage.shop.cart') }} ({{ cartCount }})
+                  </span>
+                </router-link>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -35,6 +57,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'TheNavbar',
   data () {
@@ -50,11 +74,24 @@ export default {
         { title: this.$t('menu.futureGadgets'), to: '/gadgets' },
         { title: this.$t('menu.bbs'), to: '/bbs' }
       ]
-    }
+    },
+    ...mapGetters({
+      cartCount: 'cartProductsCount'
+    })
   },
   methods: {
     toggleMenu () {
       this.isActive = !this.isActive
+    }
+  },
+  props: {
+    fixedTop: {
+      type: Boolean,
+      default: true
+    },
+    shadow: {
+      type: Boolean,
+      default: true
     }
   }
 }

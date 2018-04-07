@@ -7,17 +7,26 @@
        subtitle-spaced
        color="dark"
        size="medium"
+       is-home
     />
 
-    <div class="box cta">
-      <p class="has-text-centered">
-        <span class="tag is-info" v-t="'homePage.breakingNews'"></span>
-        {{ $t('homePage.stageOne') }}
-      </p>
+    <div class="hero is-dark is-bold is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column has-text-centered-mobile">
+              <p class="title" v-t="'homePage.divergenceMeter.title'"></p>
+              <p class="subtitle" v-t="'homePage.divergenceMeter.description'"></p>
+            </div>
+            <div class="column has-text-right-tablet has-text-centered-mobile is-paddingless">
+              <DivergenceMeter/>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <section class="container">
-      <div class="column is-10 is-offset-1">
       <div class="columns features">
         <div class="column is-4">
           <div class="card">
@@ -36,7 +45,7 @@
         <div class="column is-4">
           <div class="card">
             <div class="card-image has-text-centered">
-                <i class="fas fa-id-card"></i>
+              <i class="fab fa-empire"></i>
             </div>
             <div class="card-content">
               <div class="content">
@@ -48,9 +57,9 @@
           </div>
         </div>
         <div class="column is-4">
-          <div class="card">
+          <div class="card is-shady">
             <div class="card-image has-text-centered">
-                <i class="fas fa-rocket"></i>
+                <i class="fas fa-id-card"></i>
             </div>
             <div class="card-content">
               <div class="content">
@@ -62,17 +71,47 @@
           </div>
         </div>
       </div>
-      </div>
     </section>
+
+    <div class="hero is-primary is-bold is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <p class="title" v-t="'general.title'"></p>
+              <p class="subtitle">
+                <span class="icon">
+                  <i class="fas fa-fax"></i>
+                </span>
+                0C-3A66-1704
+              </p>
+            </div>
+            <div class="column is-3 has-text-right">
+              <router-link
+                 to="/gadgets"
+                 class="button is-rounded is-medium"
+              >
+                <span class="icon">
+                  <i class="far fa-lightbulb"></i>
+                </span>
+                <span v-t="'gadgetsPage.futureGadgets'"></span>
+              </router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import TheHero from '@/components/TheHero'
+import DivergenceMeter from '@/components/DivergenceMeter/DivergenceMeter'
 
 export default {
   components: {
-    TheHero
+    TheHero,
+    DivergenceMeter
   },
   data () {
     return {}
@@ -85,21 +124,12 @@ export default {
   background: #EFF3F4;
 }
 
-.box.cta {
-  border-radius: 0;
-  border-left: none;
-  border-right: none;
-}
-
-.box.cta .tag {
-  margin-right: 0.5em;
-}
-
 .features {
   padding: 5rem 0;
 }
 
-.card-image > .fas {
+.card-image > .fas,
+.card-image > .fab {
   font-size: 8rem;
   padding-top: 2rem;
   padding-bottom: 2rem;

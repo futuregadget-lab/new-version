@@ -3,11 +3,15 @@ export default {
   general: {
     title: '未来ガジェット研究所',
     licenced: 'The source code is licensed under {0}.',
+    icons: 'Icons by {0}.',
+    fonts: 'Fonts by {0}.',
     programmedWithLove: '{programmed} with {love} by {developer}.',
     language: '言語',
+    sitemap: 'サイトマップ',
     copyright: [
       '© 2009-2010 5pb. Inc./Nitroplus',
-      '© 2011 5pb./Nitroplus 未来ガジェット菅球場'
+      '© 2011 5pb./Nitroplus 未来ガジェット菅球場',
+      '© 2018 MAGES./KADOKAWA/Steins;Gate 0 Partners'
     ],
     crt: {
       name: 'ブラウン管工房',
@@ -19,9 +23,13 @@ export default {
     about: 'アバウト',
     futureGadgets: '未来ガジェット',
     bbs: 'フェニックスBBS',
-    update: 'updeto'
+    shoppingCart: 'ショッピングカート'
   },
   homePage: {
+    divergenceMeter: {
+      title: 'ダイバージェンス・ミーター',
+      description: 'See the divergence number in real time.'
+    },
     visitor: 'あなたは {counter}の訪問者です',
     counter: '{counter}番目',
     welcome: 'ようこそ、未来ガジェット研究所HOMEPAGEへ',
@@ -289,62 +297,20 @@ export default {
     mailOrder: '通販用ＦＡＸ番号 0C-3A66-1704',
     fax: 'ＦＡＸ',
     futureGadgets: '未来ガジェット',
-    number: '号',
+    number: '号 {number}',
     price: '価格',
-    tbd: '未定',
     gadgets: [
       {
-        name: '携帯電話型レーザー光線銃',
-        subtitle: '滋賀県・テクノポートさんの作品',
-        price: 0,
-        description: `
-          携帯をいじっていると見せかけて、背後の敵を速やかに排除……か！<br>
-          問題は、敵が正面から来た時だが……。`,
-        image: 'keitai.jpg'
-      }, {
-        name: '懐中電灯つきカラオケマイク“カライトン”',
-        subtitle: '大阪府・龍月海さんの作品',
-        price: 0,
-        description: `
-          このマイクは単一指向性か!?<br>
-          これさえあれば、あの“暗闇に潜む者”を見つけられるかもしれん……！`,
-        image: 'karaiton.jpg'
-      }, {
-        name: 'デッド or クリーン',
-        subtitle: '岩手県・金澤崇研究員作',
-        price: 0,
-        description: `
-          「シュレディンガーの猫」と絡め<br>
-          るとはこしゃくな。未来は、いつ<br>
-          だって我々観測者が決めるのだ！`,
-        image: 'dead.jpg'
-      }, {
-        name: '冷凍テレビ＆冷蔵庫',
-        subtitle: '東京都・AiNO研究員作',
-        price: 0,
-        description: `
-          コードをつないでいる間、あら<br>
-          ゆる番組を保存か。アカシックレ<br>
-          コードを思わせるいい発想だ！<br>`,
-        image: 'reito.jpg'
-      }, {
-        name: 'ジェットトースター',
-        subtitle: '奈良県・逢原トワ研究員作',
-        price: 0,
-        description: `
-          うむ読めた！　貴様はこのパン<br>
-          に、宇宙人へのメッセージを書け<br>
-          というのだな！　ベントラー！`,
-        image: 'jet.jpg'
-      }, {
         name: '電話レンジ（仮）',
-        price: 0,
+        price: 15480,
+        preOrder: true,
         description: `
           携帯電話を合体させたことにより、遠隔操作が可能になった電子レンジ。
           自宅に帰ってきたときにはすでに温めは完了している！`,
-        note: `
-          現在調整中。<br>
-          販売時期は未定です。`
+        notes: [
+          '現在調整中。',
+          '販売時期は未定です。'
+        ]
       }, {
         name: '攻殻機動迷彩ボール',
         price: 80000,
@@ -356,9 +322,10 @@ export default {
           カメラはちょうど、そのカメラと対応する球体裏側のモニタに対し直角且つ外側へ向けてある。
           これにより、このオブジェから死角は消え、
           オブジェの影に隠れても反対側からは丸見えなのだ！`,
-        note: `
-          とても巨大です。家にじゅうぶんなスペースがある方のみご注文ください。<br>
-          壊れますので転がさないでください。`
+        notes: [
+          'とても巨大です。家にじゅうぶんなスペースがある方のみご注文ください。',
+          '壊れますので転がさないでください。'
+        ]
       }, {
         name: 'サイリウム・セーバー',
         price: 1480,
@@ -367,9 +334,10 @@ export default {
           ケミカルタイプの赤いサイリウム。柄を取り付けたことにより、
           剣のようにも扱える。血糊を発光させるという画期的アイデアにより、
           リアルなチャンバラごっこが可能となった。`,
-        note: `
-          狭い場所で振り回さないでください。<br>
-          血糊が飛び散り、周囲の人の迷惑となる恐れがあります。`
+        notes: [
+          '狭い場所で振り回さないでください。',
+          '血糊が飛び散り、周囲の人の迷惑となる恐れがあります。'
+        ]
       }, {
         name: 'またつまらぬ物を繋げてしまったｂｙ五右衛門',
         price: 7800,
@@ -378,9 +346,10 @@ export default {
           電気代不要のエコドライヤー。掃除機と合体させたことにより、
           その排気を利用してドライヤーを作動させるのだ。
           マッドだがエコ。矛盾をはらむ苦悩の発明品ここに爆誕。`,
-        note: `
-          ドライヤーは熱風のみ使用できます。<br>
-          風量調整はできません。`
+        notes: [
+          'ドライヤーは熱風のみ使用できます。',
+          '風量調整はできません。'
+        ]
       }, {
         name: 'モアッド・スネーク',
         price: 7800,
@@ -389,9 +358,10 @@ export default {
           超瞬間加湿器。大量の水を、多数の電熱コイルで沸騰させ、
           ものすごい量の蒸気を噴出させる。これで乾燥した季節も恐るるに足らずだ。
           クレイモア地雷そっくりなので装飾品としても有用だ。`,
-        note: `
-          適用畳数・６畳。<br>
-          本未来ガジェットは使い捨てとなっております。`
+        notes: [
+          '適用畳数・６畳。',
+          '本未来ガジェットは使い捨てとなっております。'
+        ]
       }, {
         name: 'もしかしてオラオラですかーッ！？',
         price: 9240,
@@ -400,9 +370,10 @@ export default {
           親指の汗のかき方によって判定するウソ発見器。
           我がラボの総力を結集した史上最高傑作である。
           あらゆる嘘もあらゆる陰謀も、これさえあれば見抜くことが可能だ。`,
-        note: `
-          あくまで発汗を検知する装置であり、
+        notes: [
+          `あくまで発汗を検知する装置であり、
           実際に嘘を見抜けるかどうかは保証できません。`
+        ]
       }, {
         name: 'タケコプカメラー',
         price: 5480,
@@ -410,9 +381,10 @@ export default {
         description: `
           竹とんぼ式のＣＣＤカメラ。日本の伝統工芸品と最新ＡＶ機器が融合したとき、
           過去と未来の垣根は消え、動力なしによる空中撮影という画期的機能が実現された。`,
-        note: `
-          撮影された映像は激しく回転している状態ですが、故障等ではありません。<br>
-          この点についてはノークレームでお願いいたします。`
+        notes: [
+          '撮影された映像は激しく回転している状態ですが、故障等ではありません。',
+          'この点についてはノークレームでお願いいたします。'
+        ]
       }, {
         name: 'ビット粒子砲',
         price: 1098,
@@ -422,11 +394,51 @@ export default {
           テレビに向けて引き金を引けば、
           さながら銃を撃つかのようにチャンネルを切り替えることができる。
           さあ、少年時代を思い出せ！`,
-        note: `
-          対応しているボタンは『チャンネル送り』のみです。<br>
-          他のボタン（電源、音量調整等）は、
+        notes: [
+          '対応しているボタンは『チャンネル送り』のみです。',
+          `他のボタン（電源、音量調整等）は、
           テレビ本体から直接操作していただく必要があります。`
+        ]
       }
-    ]
+    ],
+    shop: {
+      cart: 'カート',
+      shoppingCart: 'ショッピングカート',
+      cartEmpty: 'お客様のショッピングカートに商品はありません。',
+      fromFor: '参考価格: {0}',
+      addToCart: 'カートに入れる',
+      preOrder: '予約受付中',
+      preOrderAddToCart: '予約注文する',
+      acceptingReservations: '予約受付中です。',
+      viewDetails: '商品詳細を表示',
+      proceedToCheckout: 'レジに進む',
+      order: 'リクエスト',
+      item: '0 点 | 1 点 | {count} 点',
+      subtotal: '小計 ({number})',
+      price: '価格',
+      referencePrice: '参考価格',
+      off: 'OFF',
+      offPrice: '{price} ({percent}%)',
+      quantity: '数量',
+      shop: 'ショッピング',
+      delete: '削除',
+      removedFromCart: '{0} はショッピングカートから削除されました。',
+      inStock: '在庫あり',
+      productDetails: '商品の説明',
+      customersAlsoBought: 'この商品を買った人はこんな商品も買っています',
+      addedToCart: '追加されました',
+      cartSubtotal: 'カートの小計',
+      containsGift: 'ギフトの設定（贈り主名の表示に必要です）',
+      filterBy: '絞り込み',
+      stockAvailability: '在庫状況',
+      deselect: '選択解除',
+      sortBy: '並べ替え',
+      sorting: [
+        '番号の昇順',
+        '番号の降順',
+        '価格の安い順番',
+        '価格の高い順番'
+      ]
+    }
   }
 }

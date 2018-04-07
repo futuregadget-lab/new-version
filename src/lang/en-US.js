@@ -2,11 +2,15 @@ export default {
   general: {
     title: 'Future Gadget Laboratory',
     licenced: 'The source code is licensed under {0}.',
+    icons: 'Icons by {0}.',
+    fonts: 'Fonts by {0}.',
     programmedWithLove: '{programmed} with {love} by {developer}.',
     language: 'Language',
+    sitemap: 'Sitemap',
     copyright: [
       '© 2009-2010 5pb. Inc./Nitroplus',
-      '© 2011 5pb./Nitroplus "Mirai Gadget Kenkyuujou"'
+      '© 2011 5pb./Nitroplus "Mirai Gadget Kenkyuujou"',
+      '© 2018 MAGES./KADOKAWA/Steins;Gate 0 Partners'
     ],
     crt: {
       name: 'CRT Store',
@@ -19,9 +23,13 @@ export default {
     about: 'About',
     futureGadgets: 'Future Gadgets',
     bbs: 'Phenix BBS',
-    update: 'updeto'
+    shoppingCart: 'Shopping Cart'
   },
   homePage: {
+    divergenceMeter: {
+      title: 'Divergence Meter',
+      description: 'See the divergence number in real time.'
+    },
     visitor: 'You\'re the {counter} visitor to this site.',
     counter: '{counter}TH',
     welcome: 'Welcome to the Future Gadget Laboratory homepage!',
@@ -40,8 +48,7 @@ export default {
         <a href="http://futuregadget-lab.com/" target="_blank">click here for main site</a>
       </p>`,
     notice: 'This is a modified version of {site} website.',
-    credits: 'Coded by {name} using {vuejs}.',
-    language: 'Language: {0}'
+    credits: 'Coded by {name} using {vuejs}.'
   },
   aboutPage: {
     title: 'About Lab',
@@ -271,19 +278,20 @@ export default {
     mailOrder: 'Mail order for the fax numbering: 0C-3A66-1704',
     fax: 'FAX',
     futureGadgets: 'Future Gadgets',
-    number: 'No.',
+    number: 'No. {number}',
     price: 'Price',
-    tbd: 'TBD',
     gadgets: [
       {
         name: 'PhoneWave (provisional)',
-        price: 0,
+        price: 15480,
+        preOrder: true,
         description: `
           Microwave by combining with mobile phones has enabled remote operations. 
           Warming has already been completed by time of getting home.`,
-        note: `
-          We is adjusting now.<br>
-          Not yet ready the sale.`
+        notes: [
+          'We is adjusting now.',
+          'Not yet ready the sale.'
+        ]
       }, {
         name: 'Ghost in the Shell camouflage ball',
         price: 80000,
@@ -295,9 +303,10 @@ export default {
           perpendicular to the monitor of the sphere corresponding the back with that camera. 
           As resulting, bind spot will disappear from this Thing, it's a full view from the 
           other side even if hiding the shadow of Thing.`,
-        note: `
-          Is so huge. Please order only if having enough space in the house.<br>
-          Please do not rolled then broken it.`
+        notes: [
+          'Is so huge. Please order only if having enough space in the house.',
+          'Please do not rolled then broken it.'
+        ]
       }, {
         name: 'Psyllium saver',
         price: 1480,
@@ -305,9 +314,10 @@ export default {
         description: `
           Psyllium red chemical type. By installing the handle, it can also handle as sword. 
           The revolutionary idea emit gore, pretending of sword fight realism it has become possible.`,
-        note: `
-          Please make no swinging in narrow place.<br>
-          There is possibility that the scattering of gore can annoying neighbors.`
+        notes: [
+          'Please make no swinging in narrow place.',
+          'There is possibility that the scattering of gore can annoying neighbors.'
+        ]
       }, {
         name: 'Also by Goemon you\'ve connected the thing which is not boring',
         price: 7800,
@@ -316,9 +326,10 @@ export default {
           Eco dryer that is electricity bill unneeded. By combined with the vacuum cleaner, 
           the exhaust is being used for drier use. Mad but eco. Contradiction is conception of this anguish 
           invention explosive birth here.`,
-        note: `
-          Drier can only use the hot air.<br>
-          You can not air volume control.`
+        notes: [
+          'Drier can only use the hot air.',
+          'You can not air volume control.'
+        ]
       }, {
         name: 'Moaddo Snake',
         price: 7800,
@@ -327,9 +338,10 @@ export default {
           Ultra-instant humidifier. The boiled in electric heating coil many, a large amount of water, 
           it is ejected steam tremendous amount. No more needing to fear of dry season. Because it is resembling of 
           claymore mine, is also useful for decoration the house.`,
-        note: `
-          Use for 10 square meters.<br>
-          This future gadget has become disposable.`
+        notes: [
+          'Use for 10 square meters.',
+          'This future gadget has become disposable.'
+        ]
       }, {
         name: 'You mean is this oraora!?',
         price: 9240,
@@ -338,9 +350,10 @@ export default {
           Judges lie detector depending on sweat of thumb. 
           It is the best ever masterpiece which is making a possible of by all efforts combined of lab. 
           All lie and all conspiracy can see through if only have this.`,
-        note: `
-          Is a device that detects the sweating only and 
+        notes: [
+          `Is a device that detects the sweating only and 
           can not guarantee that whether penetrable a lie actually.`
+        ]
       }, {
         name: 'Bamboo the copter camera',
         price: 5480,
@@ -348,9 +361,10 @@ export default {
         description: `
           CCD camera of spin flier toy. When the latest AV equipment and traditional crafts of Japan is fused, 
           barriers of a past and the future is disappeared, revolutionary feature called Aerial Photography by no power has been realized.`,
-        note: `
-          Video captured is a condition which is rotating violently but is not mean that is a failure or nothing.<br>
-          We making no claim for this regard.`
+        notes: [
+          'Video captured is a condition which is rotating violently but is not mean that is a failure or nothing.',
+          'We making no claim for this regard.'
+        ]
       }, {
         name: 'Bit particle gun',
         price: 1098,
@@ -358,11 +372,51 @@ export default {
         description: `
           Thing with embedded TV remote control in the ray gun toy. By closed the trigger toward the TV, 
           it is possible to switch the channel as if shooting a gun just like. Now, remember the childhood!`,
-        note: `
-          Responsive button is "next the channel" only.<br>
-          For (Power, volume control, etc.) the other buttons, 
+        notes: [
+          'Responsive button is "next the channel" only.',
+          `For (Power, volume control, etc.) the other buttons, 
           you need to work with directly at the TV main body.`
+        ]
       }
-    ]
+    ],
+    shop: {
+      cart: 'Cart',
+      shoppingCart: 'Shopping Cart',
+      cartEmpty: 'Your shopping cart is empty.',
+      fromFor: 'From {0} for:',
+      addToCart: 'Add to Cart',
+      preOrder: 'Pre-order',
+      preOrderAddToCart: 'Pre-order: Add to Cart',
+      acceptingReservations: 'Available for Pre-order.',
+      viewDetails: 'View details',
+      proceedToCheckout: 'Proceed to Checkout',
+      order: 'Order',
+      item: 'no items | 1 item | {count} items',
+      subtotal: 'Subtotal ({number})',
+      price: 'Price',
+      referencePrice: 'List price',
+      off: 'Save',
+      offPrice: '{price} ({percent}%)',
+      quantity: 'Quantity',
+      shop: 'Shopping',
+      delete: 'Delete',
+      removedFromCart: '{0} was removed from shopping cart.',
+      inStock: 'In Stock',
+      productDetails: 'Product details',
+      customersAlsoBought: 'Customers who bought this item also bought',
+      addedToCart: 'Added to Cart',
+      cartSubtotal: 'Cart subtotal',
+      containsGift: 'This order contains a gift',
+      filterBy: 'Refine by',
+      stockAvailability: 'Availability',
+      deselect: 'Deselect',
+      sortBy: 'Sort by',
+      sorting: [
+        'Number: Ascending',
+        'Number: Descending',
+        'Price: Low to High',
+        'Price: High to Low'
+      ]
+    }
   }
 }

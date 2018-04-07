@@ -13,7 +13,11 @@ import LabmenPage from '@/components/AboutPage/LabmenPage'
 import StrengthPage from '@/components/AboutPage/StrengthPage'
 import SitePage from '@/components/AboutPage/SitePage'
 
-import GadgetsPage from '@/components/GadgetsPage'
+import GadgetsShop from '@/components/GadgetsShop/GadgetsShop'
+import GadgetsShopGallery from '@/components/GadgetsShop/GadgetsShopGallery/GadgetsShopGallery'
+import GadgetsShopProduct from '@/components/GadgetsShop/GadgetsShopProduct/GadgetsShopProduct'
+
+import GadgetsShopCart from '@/components/GadgetsShop/GadgetsShopCart/GadgetsShopCart'
 
 Vue.use(Router)
 
@@ -34,8 +38,15 @@ export default new Router({
       ]
     }, {
       path: '/gadgets',
-      name: 'GadgetsPage',
-      component: GadgetsPage
+      component: GadgetsShop,
+      children: [
+        { path: '', component: GadgetsShopGallery },
+        { path: ':number', name: 'ProductDetails', component: GadgetsShopProduct, props: true }
+      ]
+    }, {
+      path: '/cart',
+      name: 'GadgetsShopCart',
+      component: GadgetsShopCart
     }, {
       path: '/bbs',
       component: BBSPage,

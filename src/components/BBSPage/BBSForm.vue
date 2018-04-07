@@ -2,7 +2,7 @@
   <article class="media">
     <figure class="media-left">
       <p class="image is-64x64">
-        <img src="https://bulma.io/images/placeholders/128x128.png">
+        <img :src="gravatarImage">
       </p>
     </figure>
     <div class="media-content">
@@ -39,7 +39,8 @@
           </div>
           <div class="field">
             <div class="control is-expanded has-icons-left">
-              <input type="text" class="input" :placeholder="$t('bbsPage.form.email')">
+              <input type="text" class="input" :placeholder="$t('bbsPage.form.email')"
+                 @blur="onEmailBlur">
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
               </span>
@@ -80,13 +81,31 @@
 </template>
 
 <script>
+import gravatar from 'gravatar'
+
 export default {
   data () {
-    return {}
+    return {
+      email: ''
+    }
+  },
+  computed: {
+    gravatarImage () {
+      return (this.email === '')
+        ? 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y&s=128'
+        : gravatar.url(this.email, { s: 128, d: 'identicon', r: 'pg' })
+    }
+  },
+  methods: {
+    onEmailBlur (event) {
+      this.email = event.target.value
+    }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.image img {
+  border-radius: 50%;
+}
 </style>

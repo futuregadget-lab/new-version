@@ -1,7 +1,7 @@
 <template>
   <section class="section has-text-centered">
     <div class="container">
-      <div class="column is-8 is-offset-2" id="road">
+      <div class="column is-10 is-offset-1" id="road">
         <h3 class="title" v-t="'aboutPage.labmenPage.title'"></h3>
         <p class="subtitle" v-t="'aboutPage.labmenPage.subtitle'"></p>
 

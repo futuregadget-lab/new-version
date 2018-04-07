@@ -5,9 +5,8 @@
        :subtitle="$t('gadgetsPage.subtitle')"
        color="dark"
        size="small"
-       :links="links"
     />
-    <router-view></router-view>
+    <router-view/>
   </div>
 </template>
 
@@ -15,19 +14,12 @@
 import TheHero from '@/components/TheHero'
 
 export default {
+  name: 'GadgetsShop',
   components: {
     TheHero
   },
   data () {
     return {}
-  },
-  computed: {
-    links () {
-      return [
-        { name: 'Gadgets', to: '/gadgets/' },
-        { name: 'Shop', to: '/gadgets/shop' }
-      ]
-    }
   }
 }
 </script>
